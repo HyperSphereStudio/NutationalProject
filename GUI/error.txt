@@ -1,0 +1,1763 @@
+=======ERROR====== 2024-04-21T08:26:59.739
+MethodError: no method matching *(::Mousetrap.Time, ::Float64)
+
+Closest candidates are:
+  *(::Any, ::Any, !Matched::Any, !Matched::Any...)
+   @ Base operators.jl:587
+  *(!Matched::Polynomials.AbstractPolynomial, ::Union{Number, Matrix})
+   @ Polynomials C:\Users\JohnB\.julia\packages\Polynomials\5ZhzG\src\common.jl:1041
+  *(!Matched::ChainRulesCore.NoTangent, ::Any)
+   @ ChainRulesCore C:\Users\JohnB\.julia\packages\ChainRulesCore\zgT0R\src\tangent_arithmetic.jl:64
+  ...
+
+Stacktrace:
+  [1] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [2] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+  [3] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+  [4] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+  [5] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+  [6] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+  [7] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:115
+  [8] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+  [9] eval
+    @ .\boot.jl:385 [inlined]
+ [10] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [11] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [12] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [13] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [14] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [15] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [16] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [17] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [18] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [19] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [20] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [21] with_logger
+    @ .\logging.jl:627 [inlined]
+ [22] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [23] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [24] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [25] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:27:49.008
+DomainError with -3.6322007e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:115
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:27:50.046
+DomainError with -3.6322617e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:115
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:27:50.514
+DomainError with -3.6322792e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:115
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:28:17.003
+DomainError with -3.6332613e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:28:17.477
+DomainError with -3.6332877e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:28:17.907
+DomainError with -3.633304e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:28:18.364
+DomainError with -3.6333215e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:28:18.877
+DomainError with -3.6333406e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:28:19.401
+DomainError with -3.63336e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:29:29.901
+DomainError with -3.6359854e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:29:30.446
+DomainError with -3.636018e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:29:30.965
+DomainError with -3.6360383e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:116
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:31:56.573
+InterruptException:
+Stacktrace:
+  [1] try_yieldto(undo::typeof(Base.ensure_rescheduled))
+    @ Base .\task.jl:931
+  [2] wait()
+    @ Base .\task.jl:995
+  [3] uv_write(s::Base.TTY, p::Ptr{UInt8}, n::UInt64)
+    @ Base .\stream.jl:1048
+  [4] unsafe_write(s::Base.TTY, p::Ptr{UInt8}, n::UInt64)
+    @ Base .\stream.jl:1120
+  [5] write
+    @ .\strings\io.jl:248 [inlined]
+  [6] print
+    @ .\strings\io.jl:250 [inlined]
+  [7] show
+    @ C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:604 [inlined]
+  [8] print(io::Base.TTY, x::Mousetrap.Time)
+    @ Base .\strings\io.jl:35
+  [9] print(::Base.TTY, ::Mousetrap.Time, ::String)
+    @ Base .\strings\io.jl:46
+ [10] println(io::Base.TTY, xs::Mousetrap.Time)
+    @ Base .\strings\io.jl:75
+ [11] println(xs::Mousetrap.Time)
+    @ Base .\coreio.jl:4
+ [12] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:95
+ [13] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [14] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [15] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [16] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [17] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [18] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:120
+ [19] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [20] eval
+    @ .\boot.jl:385 [inlined]
+ [21] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [22] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [23] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [24] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [25] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [26] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [27] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [28] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [29] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [30] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [31] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [32] with_logger
+    @ .\logging.jl:627 [inlined]
+ [33] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [34] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [35] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [36] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:32:58.477
+UndefVarError: `get_fps` not defined
+Stacktrace:
+  [1] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [2] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+  [3] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+  [4] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+  [5] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+  [6] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+  [7] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:120
+  [8] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+  [9] eval
+    @ .\boot.jl:385 [inlined]
+ [10] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [11] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [12] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [13] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [14] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [15] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [16] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [17] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [18] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [19] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [20] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [21] with_logger
+    @ .\logging.jl:627 [inlined]
+ [22] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [23] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [24] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [25] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:32:58.960
+UndefVarError: `get_fps` not defined
+Stacktrace:
+  [1] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [2] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+  [3] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+  [4] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+  [5] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+  [6] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+  [7] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:120
+  [8] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+  [9] eval
+    @ .\boot.jl:385 [inlined]
+ [10] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [11] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [12] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [13] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [14] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [15] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [16] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [17] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [18] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [19] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [20] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [21] with_logger
+    @ .\logging.jl:627 [inlined]
+ [22] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [23] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [24] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [25] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:32:59.297
+UndefVarError: `get_fps` not defined
+Stacktrace:
+  [1] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [2] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+  [3] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+  [4] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+  [5] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+  [6] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+  [7] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:120
+  [8] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+  [9] eval
+    @ .\boot.jl:385 [inlined]
+ [10] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [11] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [12] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [13] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [14] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [15] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [16] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [17] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [18] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [19] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [20] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [21] with_logger
+    @ .\logging.jl:627 [inlined]
+ [22] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [23] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [24] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [25] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:32:59.684
+UndefVarError: `get_fps` not defined
+Stacktrace:
+  [1] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [2] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+  [3] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+  [4] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+  [5] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+  [6] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+  [7] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:120
+  [8] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+  [9] eval
+    @ .\boot.jl:385 [inlined]
+ [10] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [11] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [12] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [13] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [14] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [15] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [16] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [17] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [18] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [19] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [20] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [21] with_logger
+    @ .\logging.jl:627 [inlined]
+ [22] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [23] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [24] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [25] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:33:00.095
+UndefVarError: `get_fps` not defined
+Stacktrace:
+  [1] (::Main.PayloadNutation.var"#25#28")(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:94
+  [2] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+  [3] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+  [4] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+  [5] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+  [6] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+  [7] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:120
+  [8] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+  [9] eval
+    @ .\boot.jl:385 [inlined]
+ [10] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [11] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [12] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [13] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [14] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [15] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [16] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [17] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [18] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [19] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [20] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [21] with_logger
+    @ .\logging.jl:627 [inlined]
+ [22] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [23] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [24] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [25] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:35:09.713
+DomainError with -3.6487247e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:35:10.251
+DomainError with -3.6487534e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:35:10.704
+DomainError with -3.6487703e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:35:11.209
+DomainError with -3.648789e21:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:37:36.697
+DomainError with -1.8059478:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:40
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:37:37.121
+DomainError with -41.460854:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:37
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:37:37.560
+DomainError with -0.15756893:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
+=======ERROR====== 2024-04-21T08:37:37.950
+DomainError with -2.096661:
+sqrt was called with a negative real argument but will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+  [1] throw_complex_domainerror(f::Symbol, x::Float32)
+    @ Base.Math .\math.jl:33
+  [2] sqrt
+    @ .\math.jl:686 [inlined]
+  [3] (::Main.PayloadNutation.var"#v#29")(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:96
+  [4] control_step!(s::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:102
+  [5] (::Main.PayloadNutation.var"#f#30")(t::Float64, s::Vector{Float32}, ṡ::Vector{Float32})
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:143
+  [6] rk4_step!(rk4::Main.PayloadNutation.RK4{Float32}, dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\RK4.jl:34
+  [7] model_step!(dt::Float64)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\System.jl:151
+  [8] (::Main.PayloadNutation.var"#25#28"{Base.RefValue{Int64}})(clock::Mousetrap.FrameClock)
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:98
+  [9] (::Mousetrap.TypedFunction)(args::Mousetrap.FrameClock)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:91
+ [10] (::Mousetrap.var"#1444#1445"{Mousetrap.TypedFunction})(frame_clock_ref::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:4690
+ [11] safe_call(scope::String, f::Function, args::CxxWrap.CxxWrapCore.CxxRef{Mousetrap.detail._FrameClock})
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:190
+ [12] run!(arg1::Mousetrap.detail._ApplicationAllocated)
+    @ Mousetrap.detail C:\Users\JohnB\.julia\packages\CxxWrap\5IZvn\src\CxxWrap.jl:624
+ [13] run!(app::Mousetrap.Application)
+    @ Mousetrap C:\Users\JohnB\.julia\packages\Mousetrap\CHEs7\src\Mousetrap.jl:1511
+ [14] initialize_display()
+    @ Main.PayloadNutation c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\Display.jl:121
+ [15] top-level scope
+    @ c:\Users\JohnB\OneDrive\Junior Design\Code and Sim\SubpayloadNutation.jl:63
+ [16] eval
+    @ .\boot.jl:385 [inlined]
+ [17] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base .\loading.jl:2076
+ [18] include_string(m::Module, txt::String, fname::String)
+    @ Base .\loading.jl:2086
+ [19] invokelatest(::Any, ::Any, ::Vararg{Any}; kwargs::@Kwargs{})
+    @ Base .\essentials.jl:892
+ [20] invokelatest(::Any, ::Any, ::Vararg{Any})
+    @ Base .\essentials.jl:889
+ [21] inlineeval(m::Module, code::String, code_line::Int64, code_column::Int64, file::String; softscope::Bool)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:263
+ [22] (::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:181
+ [23] withpath(f::VSCodeServer.var"#69#74"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams}, path::String)
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:274
+ [24] (::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:179
+ [25] hideprompt(f::VSCodeServer.var"#68#73"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\repl.jl:38
+ [26] (::VSCodeServer.var"#67#72"{Bool, Bool, Bool, Module, String, Int64, Int64, String, VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:150
+ [27] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging .\logging.jl:515
+ [28] with_logger
+    @ .\logging.jl:627 [inlined]
+ [29] (::VSCodeServer.var"#66#71"{VSCodeServer.ReplRunCodeRequestParams})()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:255
+ [30] #invokelatest#2
+    @ .\essentials.jl:892 [inlined]
+ [31] invokelatest(::Any)
+    @ Base .\essentials.jl:889
+ [32] (::VSCodeServer.var"#64#65")()
+    @ VSCodeServer c:\Users\JohnB\.vscode\extensions\julialang.language-julia-1.76.2\scripts\packages\VSCodeServer\src\eval.jl:34========
